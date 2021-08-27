@@ -1,17 +1,16 @@
 class [:CLASSNAME:]
-  def self.call(...)
-    new(...).call
-  end
+  def self.call(...) = new(...).call
 
   def initialize(field)
     self.field = field
   end
 
   def call
-    parent
+    module_parent
+      .all
   end
 
-  delegate :parent, to: :class
+  delegate :module_parent, to: :class
 
   private
 

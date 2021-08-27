@@ -1,7 +1,5 @@
 class [:CLASSNAME:]
-  def self.call(...)
-    new(...).call
-  end
+  def self.call(...) = new(...).call
 
   def initialize(arg)
     self.arg = arg
