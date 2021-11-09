@@ -2,9 +2,13 @@ require "rails_helper"
 
 RSpec.describe [:CLASSNAME:] do
   describe ".call" do
-    subject { described_class }
+    let(:klass) { described_class }
 
-    it { should forward_to_instance(:call).with_0_args }
+    it "forwards the call" do
+      expect(klass)
+        .to forward_to_instance(:call)
+        .with_0_args
+    end
   end
 
   describe "#call" do
